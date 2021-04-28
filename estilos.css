@@ -1,6 +1,9 @@
 body{
     font-family: Helvetica;
 }
+h1{
+    text-align: center;
+}
 .center {
     margin: auto;
     width: 40%;

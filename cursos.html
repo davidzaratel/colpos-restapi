@@ -9,34 +9,37 @@
 
 <body>
     <h1>Cursos</h1>
-    <form id="formulario">
-        <div id="divForm">
-            <label>Nombre del curso:</label>
-            <input type="text" id="nombre">
-        </div>
-        <div id="divForm">
-            <label>Descripción:</label>
-            <input type="text" id="descripcion">
-        </div>
-        <div id="divForm">
-            <label>Nivel:</label>
-            <input type="text" id="nivel">    
-        </div>
-        <div id="divForm">
-            <label>Categoría:</label>
-            <input type="text" id="categoria">    
-        </div>
-        <div id="divForm">
-            <label>Duración:</label>
-            <input type="number" id="duracion">
-            <label>horas.</label>    
-        </div>
+    <container class = "center">
+        <form id="formulario">
+            <div id="divForm">
+                <label>Nombre del curso:</label>
+                <input type="text" id="nombre">
+            </div>
+            <div id="divForm">
+                <label>Descripción:</label>
+                <input type="text" id="descripcion">
+            </div>
+            <div id="divForm">
+                <label>Nivel:</label>
+                <input type="text" id="nivel">    
+            </div>
+            <div id="divForm">
+                <label>Categoría:</label>
+                <input type="text" id="categoria">    
+            </div>
+            <div id="divForm">
+                <label>Duración:</label>
+                <input type="number" id="duracion">
+                <label>horas.</label>    
+            </div>
+            <div id="divForm">
+                <button onclick="postCurso()">Registrar Curso</button>
+                <button onclick="getAllCursos()">Ver Cursos</button>
+            </div>
+        </form>
         
-    </form>
-    <div id="divForm">
-        <button onclick="postCurso()">Registrar Curso</button>
-        <button onclick="getAllCursos()">Ver Cursos</button>
-    </div>
+    </container>
+    
     <p id="postExito"></p>
     <div id="resultados"></div>
     
