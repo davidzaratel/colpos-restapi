@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Usuarios</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <container class = "center" id ="containerUsuarios">
+            <h1>Usuarios</h1>
+            <form id = "formulario">
+                <div id="divForm">
+                    <label>Nombre</label>
+                    <input type="text" id="name">
+                </div>
+                <div id="divForm">
+                    <label>Apellido</label>
+                    <input type="text" id="apellido">
+                </div>
+                <div id="divForm">
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" id="fechaNac">
+                </div>
+                <div id="divForm">
+                    <label>Correo</label>
+                    <input type="text" id="email">
+                </div>
+                <div id="divForm">
+                    <label>Teléfono</label>
+                    <input type="text" id="tel">
+                </div>
+                <div id="divForm">
+                    <label>Contraseña</label>
+                    <input type="text" id="pwd">
+                </div>
+                <div id="divForm">
+                    <button onclick="">Añadir usuario</button>
+                    <button onclick="">Ver usuarios</button>
+                </div>
+            </form>
+        </container>
+            <p id="postExito"></p>
+
+            <div id="resultados">                
+            </div>
+
+            <script src="usuarios.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        
+    </body>
+</html>
