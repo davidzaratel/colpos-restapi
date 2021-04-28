@@ -1,4 +1,4 @@
-var url ="";
+var url ="35.225.196.111:8135/api/Cursos";
 function postCurso(){
     var nombre = $('#nombre').val();
     var descripcion= $('#descripcion').val();
@@ -11,7 +11,8 @@ function postCurso(){
         window.alert("Debe llenar todos los campos");
     }else{
         var myCurso={
-        nombreCurso: nombre,
+        nombre: nombre,
+
         descripcion: descripcion,
         nivel: nivel,
         categoria: categoria,
@@ -20,19 +21,17 @@ function postCurso(){
     
     console.log(myCurso);
     
-    // $.ajax({
-    //     url: url,
-    //     type: 'post',
-    //     dataType: 'json',
-    //     contentType: 'application/json',
-    //     success: function(dataPosted){
-    //         $('#postExito').html('<p> Curso publicado con éxito </p>')
-    //     },
-    //     data: JSON.stringify(myCurso)
-        
+    $.ajax({
+        url: url,
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function(dataPosted){
+            $('#postExito').html('<p> Curso publicado con éxito </p>')
+        },
+        data: JSON.stringify(myCurso)
+    });
 
-    // });
-    }
 }
 
 function getAllCursos(){
@@ -45,7 +44,7 @@ function getAllCursos(){
             arrCursos.forEach(function(item) {
                 console.log(item);
                 htmlTableCursos+= '<tr>'+
-                                        '<td>'+item.nombreCurso+'</td>'+
+                                        '<td>'+item.nombre+'</td>'+
                                         '<td>'+item.descripcion+'</td>'+
                                         '<td>'+item.nivel+'</td>'+
                                         '<td>'+item.categoria+'</td>'+
