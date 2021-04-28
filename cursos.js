@@ -7,14 +7,16 @@ function postCurso(){
     var duracion= $('#duracion').val();
     // console.log(typeof(descripcion));
     // console.log(typeof(duracion));
-
-    var myCurso={
+    if (nombre == "" || descripcion == "" || nivel == "" || categoria == "" || duracion == NaN){
+        window.alert("Debe llenar todos los campos");
+    }else{
+        var myCurso={
         nombreCurso: nombre,
         descripcion: descripcion,
         nivel: nivel,
         categoria: categoria,
         duracion: duracion
-    };
+        };
     
     console.log(myCurso);
     
@@ -30,7 +32,7 @@ function postCurso(){
         
 
     // });
-
+    }
 }
 
 function getAllCursos(){
