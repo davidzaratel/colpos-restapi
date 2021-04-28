@@ -1,1 +1,1 @@
-# colpos-restapi
+# colpos-web
