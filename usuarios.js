@@ -1,4 +1,4 @@
-var url ="";
+var url ="35.223.20.167:8135/Users";
 function postUser(){
     var myNombre = $('#name').val();
     var myApellido = $('#apellido').val();
@@ -9,7 +9,7 @@ function postUser(){
         window.alert("Debe llenar todos los campos");
     }else{
         var myUsuario = {
-            nombre: myNombre,
+            name: myNombre,
             apellidos: myApellido,
             email: myCorreo,
             numero: myTelefono,
@@ -37,7 +37,7 @@ function postUser(){
             function(json){
                 console.log(json);
                 var arrUsuarios = json.usuarios;
-                var htmlTableUsuarios = '<table id="tablaResultados"> <tr> <th>Nombre</th> <th>Apellido</th> <th>Fecha de nacimiento</th> <th>Correo</th> <th>Teléfono</th> <th>Contraseña</th>  </tr>'
+                var htmlTableUsuarios = '<table id="tablaResultados"> <tr> <th>Nombre</th> <th>Apellido</th> <th>Correo</th> <th>Teléfono</th> <th>Contraseña</th>  </tr>'
     
                 arrUsuarios.forEach(function(item) {
                     console.log(item);
