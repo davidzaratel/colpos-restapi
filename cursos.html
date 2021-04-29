@@ -33,20 +33,23 @@
                 <input type="number" id="duracion">
                 <label>horas.</label>    
             </div>
-            <div id="divForm">
-                <button onclick="postCurso()">Registrar Curso</button>
-                <button onclick="getAllCursos()">Ver Cursos</button>
-            </div>
+            
         </form>
+        <div id="divButton">
+            <button onclick="postCurso()">Registrar Curso</button>
+            <button onclick="getAllCursos()">Ver Cursos</button>            
+        </div>
         
     </container>
+
+    
     
     <p id="postExito"></p>
-    <div id="resultados"></div>
+    <div id="resultado"></div>
     
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="cursos.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 </body>
 
 

@@ -1,5 +1,6 @@
-var url ="35.225.196.111:8135/api/Cursos";
+var url ="http://35.223.20.167:8135/api/Cursos";
 function postCurso(){
+    console.log("hola");
     var nombre = $('#nombre').val();
     var descripcion= $('#descripcion').val();
     var nivel= $('#nivel').val();
@@ -31,12 +32,15 @@ function postCurso(){
         },
         data: JSON.stringify(myCurso)
     });
+}
 
 }
 
 function getAllCursos(){
+    console.log("entra a jquery");
     $.getJSON(url,
         function(json){
+            console.log("entra a get json");
             console.log(json);
             var arrCursos = json.cursos;
             var htmlTableCursos = '<table id="tablaResultados"> <tr> <th>Nombre</th> <th>Descripción</th> <th>Nivel</th> <th>Categoría</th> <th>Duración (horas)</th> </tr>'
@@ -55,5 +59,5 @@ function getAllCursos(){
             $('#resultado').html(htmlTableCursos);
         }
     );
-
+    console.log("sale de jquery");
 }

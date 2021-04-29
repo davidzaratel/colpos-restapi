@@ -29,18 +29,18 @@
                     <label>Contraseña</label>
                     <input type="text" id="pwd">
                 </div>
-                <div id="divForm">
-                    <button onclick="postUser()">Añadir usuario</button>
-                    <button onclick="getAllUsers()">Ver usuarios</button>
-                </div>
             </form>
-        </container>
-            <p id="postExito"></p>
-
-            <div id="resultados">                
+            <div id="divButton">
+                <button onclick="postUser()">Añadir usuario</button>
+                <button onclick="getAllUsers()">Ver usuarios</button>
             </div>
+        </container>
+        
+            <p id="postExito"></p>
+            <div id="resultados"></div>
 
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="usuarios.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            
     </body>
 </html>
